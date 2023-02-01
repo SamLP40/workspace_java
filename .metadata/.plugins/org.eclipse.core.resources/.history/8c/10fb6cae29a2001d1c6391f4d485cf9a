@@ -1,0 +1,47 @@
+import java.util.HashMap;
+import java.util.Map; 
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+// Générer la javadoc => Window -> generate javadoc -> paramétrer pour générer sur le projet en cours
+public class PlmAirbus {
+
+	@SuppressWarnings("unlikely-arg-type") // Pour prévenir en cas d'argument inattendu par la console
+	public static void main (String[] plm) { 
+
+		Scanner scan = new Scanner(System.in); 
+		HashMap<String, String[][]> database = new HashMap(); /* 1/ Afficher tous les avions
+		Afficher tous les avions contenant un mot clé dans le programme
+		Ajouter ou supprimer une pièce pour un avion donné
+		Afficher un avion avec les infos détaillées de chaque pièces
+		Quitter
+		 */
+
+		// Tableaux contenant les ID, la phase, le programme, et le type d'avion
+		
+	
+		/* String[] id = {"1", "2", "3", "4", "5"};
+		String[] stage = {"faisabilite", "conception", "definition", "construction", "cloture"}; // Phases
+ 		String[] program = {"A220", "A300", "A320", "A350", "A380", "A400M"};
+		String[] type = {"Fret", "transport", "militaire", "passager", "affaires"}; */
+		String[][] data = {{"1", "A300", "conception", "Fret"},
+		{"2", "A320", "faisabilite", "passager"},
+		{"3", "A350", "cloture", "affaires"},
+		{"4", "A380", "cloture", "transport"},
+		{"5", "A400M", "definition", "militaire"}};
+		database.put("1", database.get(data[1]));
+		
+		System.out.println(database.get("A"));
+		}
+	
+	/*	HashMap<String, String> data = new HashMap();
+		data.put("conception", "Fret");
+		data.put("faisabilite", "transport");
+		data.put("definition", "passager");
+		data.put("construction", "militaire");
+		data.put("en service", "affaires");
+		data.put("cloture", "autre"); */
+
+		
+		}

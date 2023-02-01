@@ -1,0 +1,57 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+/* Étapes :
+ * 1. Demander à l'utilisateur de saisir le nom puis le prénom = scanner
+ * On ne connaît pas à l'avance le nombre de notes qui seront saisies dans le tableau
+ * 2. Afficher la moyenne
+ * 3. Répéter la saisie tant qu'il y a des élèves */
+
+public class SaisieNotes {
+
+	public static void main (String[] args) {
+// Paramètres à saisir par le professeur (et calcul de la moyenne des valeurs saisies)
+		String nomEleve = ""; 
+		String prenomEleve = "";
+		String saisieNote = "Oui";
+		int note = 0;
+		double avg=0;
+		int counter=0;
+		int[] listeNotes = {};
+		Scanner scan = new Scanner(System.in);
+		while(saisieNote.equalsIgnoreCase("Oui")) {
+			
+			System.out.println("Veuillez saisir le nom de l'élève : "); // Ajout de paramètres en fonction des besoins
+			nomEleve= scan.next();
+			System.out.println("\nSaisissez le prénom :");
+			prenomEleve= scan.next();
+			System.out.println("\nSaisissez les notes de l'élève : ");
+ { // faire une boucle proposant au professeur de saisir autant de notes qu'il souhaite pour un élève donné
+		// Stocker les notes saisies dans un variable (somme de toutes les notes saisies)
+			System.out.println(nomEleve +" " + prenomEleve+" "+scores(scan)); // afficher la moyenne des notes
+			System.out.println("Ajouter un élève ?"); // Pour calculer la moyenne je vais avoir besoin de connaître la somme des notes / nb de notes
+			saisieNote=scan.next();
+			}
+		
+		System.out.println("Au revoir.");
+		 }
+		scan.close();
+	} 
+
+	public static double scores(Scanner scan) {
+		
+		int counter=0;
+		double moy=0.0;
+		
+		while(scan.hasNext()) {
+			if (scan.hasNextDouble()) {
+			moy += scan.nextDouble();
+			counter++;
+			}else {
+				scan.next();
+				break;
+			}
+		}
+		return moy/counter;
+	}
+}

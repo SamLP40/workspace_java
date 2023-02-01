@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class ChoixEleve {
+// Le programme doit retourner un élève présent parmi une 
+// liste d'élèves : s'il est présent, alors le programme 
+// retourne les notes et la moyenne
+	 public static void main (String[] args) {
+
+		 
+		 
+		  String[] ListEleve = {"Guillaume Anselme", "Dylan de Albuquerque", "Camille Gaschet", 
+				"Ludovic Dupre", "Samuel Le Porcher", "Nicolas Wache", "Francois Supervielle"}; //Liste des étudiants
+		double[][] notes= 
+		{{10.5, 12, 14},
+		{18, 15, 19},
+		{11, 14, 14.5},
+		{15, 12, 16},
+		{9, 12, 13},
+		{9, 13, 13},
+		{10.5, 17, 15.5}}; // Liste des notes par étudiant
+		String nomEleve = "";
+		// String prenomEleve="";
+		//int p=1; // Démarrage à -1 pour éviter d'oublier une valeur lors du parcours des tableaux
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Saisir nom/prénom de l'élève : ");
+		nomEleve = scan.nextLine(); // Saisie de l'élève (nom/prénom)
+		for (int i=0;i<=ListEleve.length;i++) { // Parcours du tableau de string
+			
+		if (nomEleve.equalsIgnoreCase(ListEleve[i])) { // trouver le moyen pour indiquer au programme que l'on veut renvoyer la string contenue dans le tableau [espaces compris]
+			System.out.println("Moyenne de l'élève : "+scores(scan)); // utiliser la méthode pour retourner la moyenne des valeurs de notes[]
+		} else {
+			System.out.println("L'élève n'est pas dans la liste");
+			break;
+		}
+				
+		}}
+		
+	public static double scores(Scanner scan) {
+
+		int counter=0;
+		double moy=0.0;
+
+		while(scan.hasNext()) {
+			if (scan.hasNextDouble()) {
+				moy += scan.nextDouble();
+				counter++;
+			}else {
+				scan.next();
+				break;
+			}
+		}
+		return moy/counter;
+			
+	}
+}

@@ -1,0 +1,63 @@
+import java.util.HashMap;
+import java.util.Map; 
+import java.util.Scanner;
+import java.util.ArrayList;
+
+// Générer la javadoc => Window -> generate javadoc -> paramétrer pour générer sur le projet en cours
+public class PlmAirbus {
+
+	@SuppressWarnings("unlikely-arg-type") // Pour prévenir en cas d'argument inattendu par la console
+	
+	/* 1/ Afficher tous les avions
+	2/ Afficher tous les avions contenant un mot clé dans le programme
+	3/ Ajouter ou supprimer une pièce pour un avion donné
+	4/ Afficher un avion avec les infos détaillées de chaque pièces
+	Quitter
+	 */
+	public static void main (String[] plm) { 
+		String[][] data = {{"1", "A300", "conception", "Fret"},
+				{"2", "A320", "faisabilite", "passager"},
+				{"3", "A350", "cloture", "affaires"},
+				{"4", "A380", "cloture", "transport"},
+				{"5", "A400M", "definition", "militaire"}};
+		
+		ArrayList<String> plane1 = new ArrayList<>();
+		plane1.add("A300");
+		plane1.add("conception");
+		plane1.add("Fret");
+		ArrayList<String> plane2 = new ArrayList<>();
+		plane2.add("A320");
+		plane2.add("faisabilité");
+		plane2.add("Passager");
+		ArrayList<String> plane3 = new ArrayList<>();
+		plane3.add("A350");
+		plane3.add("clôturé");
+		plane3.add("Affaires");
+		ArrayList<String> plane4 = new ArrayList<>();
+		plane4.add("A380");
+		plane4.add("définition");
+		plane4.add("Transport");
+		ArrayList<String> plane5 = new ArrayList<>();
+		plane5.add("A400M");
+		plane5.add("construction");
+		plane5.add("Militaire");
+		Scanner scan = new Scanner(System.in); 
+		int index=0;
+
+			System.out.println(data);
+		/* String[] id = {"1", "2", "3", "4", "5"};
+		String[] stage = {"faisabilite", "conception", "definition", "construction", "cloture"}; // Phases
+ 		String[] program = {"A220", "A300", "A320", "A350", "A380", "A400M"};
+		String[] type = {"Fret", "transport", "militaire", "passager", "affaires"}; */
+		}
+	
+	/*	HashMap<String, String> data = new HashMap();
+		data.put("conception", "Fret");
+		data.put("faisabilite", "transport");
+		data.put("definition", "passager");
+		data.put("construction", "militaire");
+		data.put("en service", "affaires");
+		data.put("cloture", "autre"); */
+
+		
+		}

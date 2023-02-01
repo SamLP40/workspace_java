@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class ChoixEleve {
+// Le programme doit retourner un élève présent parmi une liste d'élèves : s'il est présent, alors le programme retourne les notes et la moyenne
+	public static void main (String[] args) {
+
+		String[] ListEleve = {"Guillaume Anselme", "Dylan de Albuquerque", "Camille Gaschet", 
+				"Ludovic Dupre", "Samuel Le Porcher", "Nicolas Wache", "Francois Supervielle"}; 
+		String saisieNote = "Oui";
+		String nomEleve = "";
+		String prenomEleve="";
+		boolean estLa = true;
+		int i=0;
+		
+		Scanner scan = new Scanner(System.in);
+		while(saisieNote.equalsIgnoreCase("Oui")) {
+
+			System.out.println("Veuillez saisir le nom de l'élève : "); // Ajout de paramètres en fonction des besoins
+			nomEleve= scan.next();
+			for (i=0;i==ListEleve.length;i++) {
+			if (nomEleve != ListEleve[i]) {
+				System.out.println("L'élève n'est pas dans la liste");
+				estLa=false;
+			}
+			System.out.println("\nSaisissez le prénom :");
+			prenomEleve= scan.next();
+			System.out.println("\nSaisissez les notes de l'élève : ");
+			{
+
+				System.out.println(nomEleve +" " + prenomEleve+" "+scores(scan)); // affiche la moyenne des notes
+				System.out.println("Ajouter un élève ?");
+				saisieNote=scan.next();
+				scan.nextLine(); // Pour éviter de sauter une ligne si on relance
+			}
+		}
+		System.out.println("Au revoir.");
+ }
+	} 
+	// Méthode permettant d'effectuer la moyenne et de la stocker pour l'afficher.
+	public static double scores(Scanner scan) {
+
+		int counter=0;
+		double moy=0.0;
+
+		while(scan.hasNext()) {
+			if (scan.hasNextDouble()) {
+				moy += scan.nextDouble();
+				counter++;
+			}else {
+				scan.next();
+				break;
+			}
+		}
+		return moy/counter;
+	}
+}

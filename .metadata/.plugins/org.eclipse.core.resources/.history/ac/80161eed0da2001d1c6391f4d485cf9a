@@ -1,0 +1,38 @@
+import java.util.HashMap;
+import java.util.Map; 
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Scanner;
+public class PlmAirbus {
+
+	@SuppressWarnings("unlikely-arg-type")
+	public static void main (String[] plm) {
+		
+		Scanner scan = new Scanner(System.in);
+		Map<String, String[]> database = new HashMap();
+
+		String[] id = {"1a", "2b", "3c", "4d", "5e"};
+		String[] stage = {"faisabilite", "conception", "definition", "construction", "cloture"};
+		String[] program = {"A220", "A300", "A320", "A350", "A380", "A400M"};
+		String[] type = {"Fret", "transport", "militaire", "passager", "affaires"};
+		
+		HashMap<String, String> data = new HashMap();
+		data.put("conception", "Fret");
+		data.put("faisabilite", "transport");
+		data.put("definition", "passager");
+		data.put("construction", "militaire");
+		data.put("en service", "affaires");
+		data.put("cloture", "autre");
+		
+		System.out.print(database);
+		
+		if (database.equals("A")) {
+			database.remove(1);
+			database.remove(2);
+			database.remove(3);
+			
+			System.out.print(database);
+		}
+		}
+	}
+

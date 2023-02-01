@@ -1,0 +1,25 @@
+public class Strings {
+// Concaténation
+/*	public static void main (String[] args) {
+		String test = "ceci est un test";
+		String test2 = " de type string";
+		String res= test.concat(test2);
+
+		System.out.println(test + test2);
+		System.out.println(res);
+	} */
+	public static void main (String[] args) {
+		
+		String sentence = "Il fait beau aujourd'hui";
+		boolean isEqual = false;
+		int ind = 0;
+		
+		for (String i="";i == sentence.substring(0, 24); ind++) {
+			if (sentence.equalsIgnoreCase("Beau")) isEqual=true;
+			System.out.println("Trouvé");
+			break;
+		}
+	}
+}
+
+	

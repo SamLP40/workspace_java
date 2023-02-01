@@ -1,0 +1,12 @@
+public class Strings {
+
+	public static void main (String[] args) {
+		String test = "ceci est un test";
+		String test2 = " de type string";
+		String res= test.concat(test2);
+
+		System.out.println(test + test2);
+		System.out.println(res);
+	}
+
+}

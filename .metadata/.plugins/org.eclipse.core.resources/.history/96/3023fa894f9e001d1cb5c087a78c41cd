@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+public class Tri {
+
+	public static void main (String[] args) {
+		
+		String[] ListEleve = {"Guillaume Anselme", "Dylan de Albuquerque", "Camille Gaschet", 
+				"Ludovic Dupre", "Samuel Le Porcher", "Nicolas Wache", "Francois Supervielle"}; //Liste des étudiants
+		String[] SortedList = new String[ListEleve.length];
+			System.out.println(Arrays.toString(ListEleve));
+			Arrays.sort(ListEleve);
+			System.out.println(Arrays.toString(ListEleve));		
+		/*ArrayList<String> list = new ArrayList<String>();
+	
+		list.add(Guillaume);
+		list.add(Dylan);
+		list.add(Camille);
+		list.add(Ludovic);
+		list.add(Samuel);
+		list.add(Nicolas);
+		list.add(Francois); */
+
+	}
+
+	public static ArrayList<String> sort (ArrayList<String> list) {
+		
+
+	}
+}
+	
